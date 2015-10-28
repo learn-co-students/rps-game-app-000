@@ -16,22 +16,19 @@ class RPSGame
   end
 
   def won?
-  	comp_play = computer_play
-  	(play == :rock && comp_play == :scissors) || 
-  	(play == :paper && comp_play == :rock) || 
-  	(play == :scissors && comp_play == :paper)
+  	(play == :rock && computer_play == :scissors) || 
+  	(play == :paper && computer_play == :rock) || 
+  	(play == :scissors && computer_play == :paper)
   end
 
   def tied?
-  	comp_play = computer_play
-  	play == comp_play
+  	play == computer_play
   end
 
   def lost?
-  	comp_play = computer_play
-  	(play == :rock && comp_play == :paper) || 
-  	(play == :paper && comp_play == :scissors) || 
-  	(play == :scissors && comp_play == :rock)
+  	(play == :rock && computer_play == :paper) || 
+  	(play == :paper && computer_play == :scissors) || 
+  	(play == :scissors && computer_play == :rock)
   end
 
 end
