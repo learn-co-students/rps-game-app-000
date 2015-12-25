@@ -1,1 +1,13 @@
 <h1>WELCOME TO ROCK PAPER SCISSORS</h1>
+<h3>Your Play:</h3> 
+<h2><%= @this_game.type.upcase %></h2>
+<h3>Computer's Play:</h3> 
+<h2><%= @this_game.comp_type.upcase %></h2>
+<h3>RESULT:</h3> 
+<% if @this_game.won? %> 
+  <h1><%= "YOU WON!" %></h1>
+<% elsif @this_game.tied? %>
+  <h1><%= "YOU TIED!" %></h1>
+<% else  %>
+  <h1><%= "YOU LOST!" %></h1>
+<% end  %>
