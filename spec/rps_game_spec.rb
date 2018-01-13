@@ -104,7 +104,6 @@ describe RPSGame do
     it "should return false if the player tied" do
       game = RPSGame.new(:rock)
       allow(game).to receive(:computer_play) { :rock }
-
       expect(game.lost?).to eq(false)
     end
   end
